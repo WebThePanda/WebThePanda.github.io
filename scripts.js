@@ -14,7 +14,7 @@ if (!isReturning) {
 fetch("https://api.counterapi.dev/v2/sanders-team-3869/wtp-gh-io-page-views")
   .then(res => res.json())
   .then(data => {
-    animateCounter(counterEl, data.data.up_value, isReturning);
+    animateCounter(counterEl, data.data.up_count, isReturning);
     console.log(data.data.up_count)
   });
 

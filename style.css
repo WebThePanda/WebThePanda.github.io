@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Cinzel;
+    src: url(assets/Cinzel-VariableFont_wght.ttf);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    min-height: 100vh;
+    background-color: #111011;
+  }
+
+span, p, li {
+    font-family: 'Courier New';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel';
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    height: 100%;
+    padding: 40px;
+    background-color: #070707;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    text-align: left;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    text-align: right;
+}
+
+button {
+    background: none;
+    color: white;
+}

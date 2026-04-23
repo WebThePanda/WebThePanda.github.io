@@ -8,15 +8,18 @@ if (!isReturning) {
   fetch("https://api.counterapi.dev/v2/sanders-team-3869/wtp-gh-io-page-views/up")
     .catch(() => {});
   localStorage.setItem("visited", "true");
+  updateCounter()
 }
 
 // always fetch value
-fetch("https://api.counterapi.dev/v2/sanders-team-3869/wtp-gh-io-page-views")
-  .then(res => res.json())
-  .then(data => {
-    animateCounter(counterEl, data.data.up_count, isReturning);
-    console.log(data.data.up_count)
-  });
+function updateCounter() {
+    fetch("https://api.counterapi.dev/v2/sanders-team-3869/wtp-gh-io-page-views")
+      .then(res => res.json())
+      .then(data => {
+        animateCounter(counterEl, data.data.up_count, isReturning);
+        console.log(data.data.up_count)
+      });
+}
 
 
 // 🔥 animation function (terminal style)
@@ -40,3 +43,5 @@ function animateCounter(el, target, returning) {
     el.textContent = prefix + current;
   }, 20);
 }
+
+updateCounter()
